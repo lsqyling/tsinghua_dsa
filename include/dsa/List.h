@@ -156,8 +156,7 @@ public:
 
     List(std::initializer_list<ValueType> li);
 
-    template<typename InIterator,
-            typename = std::_RequireInputIter<InIterator>>
+    template<typename InIterator>
     List(InIterator beg, InIterator end);
 
     List(const List &rhs);
@@ -249,8 +248,7 @@ public:
 
     Iterator insert(Iterator pos, std::initializer_list<ValueType> li);
 
-    template<typename InIterator,
-            typename = std::_RequireInputIter<InIterator>>
+    template<typename InIterator>
     Iterator insert(Iterator pos, InIterator beg, InIterator end);
 
     Iterator erase(Iterator pos) noexcept;
@@ -408,7 +406,7 @@ List<T>::List(std::initializer_list<ValueType> li) : List()
 }
 
 template<typename T>
-template<typename InIterator, typename>
+template<typename InIterator>
 List<T>::List(InIterator beg, InIterator end) : List()
 {
     auto cnt = UtilityL::createListByRange(beg, end, head_, tail_);
@@ -595,7 +593,7 @@ typename List<T>::Iterator List<T>::insert(List::Iterator pos, std::initializer_
 }
 
 template<typename T>
-template<typename InIterator, typename>
+template<typename InIterator>
 typename List<T>::Iterator List<T>::insert(List::Iterator pos, InIterator beg, InIterator end)
 {
     Node *last = static_cast<Node *>(pos), *curr = last->prev_, *next;

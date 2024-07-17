@@ -2,9 +2,9 @@
 // Created by shiqing on 19-5-23.
 //
 
-#include "../include/List.h"
-#include "../include/Vector.h"
-#include "../../common/CommonHeaders.h"
+#include "dsa/CommonHeaders.h"
+#include "dsa/List.h"
+#include "dsa/Vector.h"
 
 using namespace linear;
 
@@ -13,8 +13,8 @@ void testingConstructor()
     List<int> l1(10);
     cout << l1 << "l1.size = " << l1.size() << ":" << l1.empty() << endl;
 
-    List<int> l2(9, 100);
-    cout << l2 << "l2.size = " << l2.size() << ":" << l2.empty() << endl;
+//    List<int> l2(9, 100);
+//    cout << l2 << "l2.size = " << l2.size() << ":" << l2.empty() << endl;
 
     List<int> l3{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     cout << l3 << "l3.size = " << l3.size() << ":" << l3.empty() << endl;
@@ -26,8 +26,8 @@ void testingConstructor()
     List<int> l5(l4);
     cout << l5 << "l5.size = " << l5.size() << ":" << l5.empty() << endl;
 
-    List<int> l6(std::move(l2));
-    cout << l6 << "l6.size = " << l6.size() << ":" << l6.empty() << endl;
+//    List<int> l6(std::move(l2));
+//    cout << l6 << "l6.size = " << l6.size() << ":" << l6.empty() << endl;
 
     List<int> l7;
     l7 = l5;

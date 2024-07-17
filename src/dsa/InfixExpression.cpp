@@ -1,10 +1,11 @@
-//
+ //
 // Created by shiqing on 19-5-26.
 //
 
 #include <sstream>
 #include <cmath>
-#include "../include/InfixExpression.h"
+#include "dsa/InfixExpression.h"
+
 
 namespace linear {
 

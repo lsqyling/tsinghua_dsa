@@ -3,7 +3,8 @@
 //
 
 #include <cstdio>
-#include "../include/Josephus.h"
+#include "dsa/Josephus.h"
+
 
 namespace josephus {
 

@@ -2,7 +2,8 @@
 // Created by shiqing on 2020/5/7.
 //
 
-#include "Fib.h"
+
+#include "dsa/Fib.h"
 
 Fib::Fib(int n) : g_(0), f_(1)
 {

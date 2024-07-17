@@ -2,8 +2,10 @@
 // Created by shiqing on 19-5-18.
 //
 
-#include "../../common/CommonHeaders.h"
-#include "../include/String.h"
+#include "dsa/CommonHeaders.h"
+#include "dsa/Vector.h"
+#include "dsa/String.h"
+
 
 using namespace linear;
 
