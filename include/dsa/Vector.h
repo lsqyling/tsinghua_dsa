@@ -12,7 +12,6 @@
 #include <iostream>
 
 namespace linear {
-
 namespace UtilityV {
 template<typename T, typename...Args>
 inline void constructAt(T *ptr, Args &&...args)
@@ -589,8 +588,9 @@ T *uniquely(int lo, int hi, T *buf) noexcept
 template<typename T>
 void Vector<T>::sort() noexcept
 {
-    size_t rand = random();
-    if (rand & 1U) helperV::mergeSort(0, size(), bufBegin_);
+    srand(time(nullptr));
+    size_t ra = rand();
+    if (ra & 1U) helperV::mergeSort(0, size(), bufBegin_);
     else helperV::bubbleSort(0, size(), bufBegin_);
 }
 

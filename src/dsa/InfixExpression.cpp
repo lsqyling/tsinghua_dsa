@@ -9,7 +9,7 @@
 
 namespace linear {
 
-const char InfixExpression::priorityTable_[LEN][LEN];
+//const char InfixExpression::priorityTable_[LEN][LEN];
 
 double InfixExpression::evaluate() noexcept
 {
