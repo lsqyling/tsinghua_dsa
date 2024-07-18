@@ -4,7 +4,7 @@ file(GLOB_RECURSE src_list
         CONFIGURE_DEPENDS *.cpp
 )
 
-target_sources(dsa
+target_sources(dsa_objs
         PRIVATE
         ${src_list}
 )

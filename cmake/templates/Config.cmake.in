@@ -4,4 +4,4 @@ include(CMakeFindDependencyMacro)
 
 include("${CMAKE_CURRENT_LIST_DIR}/dsa_targets.cmake")
 
-check_required_components(dsa)
+check_required_components(dsa_static dsa_shared)

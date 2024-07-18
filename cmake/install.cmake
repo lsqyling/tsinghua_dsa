@@ -1,47 +1,37 @@
 
-
-
-
-set(CMAKE_INSTALL_LIBDIR ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
-set(CMAKE_INSTALL_BINDIR ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
-set(CMAKE_INSTALL_INCLUDEDIR ${CMAKE_INSTALL_PREFIX}/include)
-
-
-
-install(TARGETS dsa
+install(TARGETS dsa_static dsa_shared
         EXPORT dsa_targets
-        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-        ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
-        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-        INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION include
 )
 
 install(DIRECTORY "${dsa_SOURCE_DIR}/include/dsa"
-        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+        DESTINATION include
 )
 
 install(EXPORT dsa_targets
         FILE dsa_targets.cmake
-        NAMESPACE tsinghua::
-        DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/dsa
+        NAMESPACE dsa::
+        DESTINATION lib/cmake/dsa
 )
 
 include(CMakePackageConfigHelpers)
 
 configure_package_config_file(${dsa_SOURCE_DIR}/cmake/templates/Config.cmake.in
         "${CMAKE_CURRENT_BINARY_DIR}/dsa-config.cmake"
-        INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/dsa
+        INSTALL_DESTINATION lib/cmake/dsa
 )
-#message("${CMAKE_CURRENT_BINARY_DIR}")
-#write_basic_package_version_file(
-#        "${CMAKE_CURRENT_BINARY_DIR}/dsa-config-version.cmake"
-#        COMPATIBILITY SameMinorVersion)
-#
-#install(FILES
-#        "${CMAKE_CURRENT_BINARY_DIR}/dsa-config.cmake"
-#        "${CMAKE_CURRENT_BINARY_DIR}/dsa-config-version.cmake"
-#        DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/dsa
-#)
+write_basic_package_version_file(
+        "${CMAKE_CURRENT_BINARY_DIR}/dsa-config-version.cmake"
+        COMPATIBILITY SameMinorVersion)
+
+install(FILES
+        "${CMAKE_CURRENT_BINARY_DIR}/dsa-config.cmake"
+        "${CMAKE_CURRENT_BINARY_DIR}/dsa-config-version.cmake"
+        DESTINATION lib/cmake/dsa
+)
 
 # uninstall target
 if(NOT TARGET uninstall)
