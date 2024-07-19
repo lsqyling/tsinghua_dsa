@@ -43,7 +43,7 @@ void testingReadAndWriteVector()
     Vector<int> vi;
     for (int i = 0; i != 1024; ++i)
     {
-        vi.pushBack(std::move(i));
+        vi.pushBack(0 + i);
     }
     cout << vi << endl;
 
@@ -84,6 +84,7 @@ void testingStr()
 
     cout << "sizeof(String): " << sizeof(String) << endl;
     cout << "sizeof(string): " << sizeof(string) << endl;
+    cout << std::format("sizeof(str) = {}", sizeof(str)) << std::endl;
 }
 
 void testingAlg()
@@ -202,7 +203,7 @@ void testingDeduction()
     int i = 42;
     int &ri = i;
     const int &cri = i;
-    int &&rri = std::move(i);
+    int &&rri = 0 + i;
 
     int *pi = &i;
     int *const cpi = &i;

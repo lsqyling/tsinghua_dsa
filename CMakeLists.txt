@@ -44,7 +44,7 @@ add_subdirectory(test)
 
 #install dir
 set(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_SOURCE_DIR}/install)
-message(STATUS "Installed directory: ${CMAKE_INSTALL_PREFIX}")
+message(STATUS "Installed directory: ${CMAKE_INSTALL_PREFIX}/install")
 
 set(dsa_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 include(cmake/install.cmake)
