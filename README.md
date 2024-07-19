@@ -17,13 +17,13 @@
 
 ### Part3. 使用说明
 
-1. 下载编译dsa库
+- 1. 下载编译dsa库
 ```shell
 git clone https://github.com/lsqyling/tsinghua_dsa.git &&
 cmake -B build &&
 cmake --build build -j4 --config Release --target install 
 ```
-2. cmake 使用dsa库
+- 2. cmake 使用dsa库
 ```cmake
 set(dsa_DIR xxx/tsinghua_dsa/install/lib/cmake/dsa)
 # xxx ---> 命令： echo | pwd 的结果，即你下载的目录路径
@@ -35,7 +35,7 @@ target_link_libraries(hello PRIVATE tsinghua::dsa_static)
 target_link_libraries(hello PRIVATE tsinghua::dsa_shared)
 
 ```
-3. main.cpp
+- 3. main.cpp
 ```c++
 #include <iostream>
 #include <dsa/Vector.h>
