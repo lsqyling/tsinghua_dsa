@@ -103,7 +103,7 @@ private:
 
 /*
  * The evaluation of simple four arithmetic expressions.
- * Restrictions: the expression cann't contain the space. only has + - * /
+ * Restrictions: the expression can't contain the space. only has + - * /
  */
 
 //    the entry of program

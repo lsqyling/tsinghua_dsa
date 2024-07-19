@@ -84,7 +84,7 @@ void testingStr()
 
     cout << "sizeof(String): " << sizeof(String) << endl;
     cout << "sizeof(string): " << sizeof(string) << endl;
-    cout << std::format("sizeof(str) = {}", sizeof(str)) << std::endl;
+//    cout << std::format("sizeof(str) = {}", sizeof(str)) << std::endl;
 }
 
 void testingAlg()

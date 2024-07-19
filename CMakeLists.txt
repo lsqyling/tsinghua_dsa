@@ -26,6 +26,9 @@ target_include_directories(dsa_objs
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:include>
 )
+if (NOT MSVC)
+    target_compile_options(dsa_objs PRIVATE -fPIC)
+endif ()
 
 add_library(dsa_static
         STATIC
@@ -35,7 +38,6 @@ add_library(dsa_shared
         SHARED
         $<TARGET_OBJECTS:dsa_objs>
 )
-
 
 
 add_subdirectory(src)
