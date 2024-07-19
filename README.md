@@ -3,15 +3,15 @@
 独立成为一个数据结构常用库。**
 
 ### Part1. 理论部分
-> - 项目结构：include/dsa | src/dsa
-> - 第一阶段：绪论计算理论部分
-> - 第二阶段：线性数据结构
-> - 第三阶段：树和图
+- 项目结构：include/dsa | src/dsa
+- 第一阶段：绪论计算理论部分
+- 第二阶段：线性数据结构
+- 第三阶段：树和图
 
 
 ### Part2. 实践部分
-> - 项目结构：oj/tsinghua | oj/leetcode
-> - 重点题目：
+- 项目结构：oj/tsinghua | oj/leetcode
+- 重点题目：
 
 
 
