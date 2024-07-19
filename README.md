@@ -1,5 +1,5 @@
 ## Tsinghua-DataStructure
-[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://github.com/Codesire-Deng/co_context/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://github.com/lsqyling/tsinghua_dsa/blob/main/LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Linux-blue)](https://img.shields.io/badge/Platform-Linux-blue)
 [![Windows](https://img.shields.io/badge/Windows-blue)](https://img.shields.io/badge/Windows-blue)
 [![Language](https://img.shields.io/badge/Language-C%2B%2B20-red)](https://en.cppreference.com/w/cpp/compiler_support/20)
