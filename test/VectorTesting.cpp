@@ -2,12 +2,36 @@
 // Created by shiqing on 19-5-18.
 //
 
+#include <map>
 #include "dsa/CommonHeaders.h"
 #include "dsa/Vector.h"
 #include "dsa/String.h"
 
 
 using namespace linear;
+
+
+void testing_stl()
+{
+    std::vector<int> vi;
+    for (int i = 0; i < 10; ++i)
+    {
+        vi.push_back(i);
+    }
+    for (auto item: vi)
+    {
+        std::cout << item << " ";
+    }
+    std::cout << std::endl;
+    std::map<std::string, std::string> ssm;
+
+
+
+
+
+
+}
+
 
 void testingConstructing()
 {
@@ -362,8 +386,8 @@ void testingDestroy()
 
 void testingSizeofStrAndVector()
 {
-    printf("sizeof(String) = %lu\n", sizeof(String));
-    printf("sizeof(Vector) = %lu\n", sizeof(Vector<int>));
+    printf("sizeof(String) = %zu\n", sizeof(String));
+    printf("sizeof(Vector) = %zu\n", sizeof(Vector<int>));
 }
 
 int main()
@@ -383,6 +407,7 @@ int main()
     testingDestroy();
     cout << "------------------------" << endl;
     testingSizeofStrAndVector();
+    testing_stl();
 
 
     return 0;

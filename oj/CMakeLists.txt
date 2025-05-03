@@ -1,0 +1,5 @@
+file(GLOB_RECURSE src_list LIST_DIRECTORIES false CONFIGURE_DEPENDS *cpp)
+foreach (fp ${src_list})
+    get_filename_component(target_name ${fp} NAME_WE)
+    add_executable(${target_name} ${fp})
+endforeach ()

@@ -26,7 +26,7 @@ target_include_directories(dsa_objs
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:include>
 )
-if (NOT MSVC)
+if (NOT WIN32)
     target_compile_options(dsa_objs PRIVATE -fPIC)
 endif ()
 

@@ -129,11 +129,7 @@ class List
 
     friend bool operator!=<T>(const List &lhs, const List &rhs);
 
-    friend std::ostream &operator
-    <<<T>(
-    std::ostream &os,
-    const List &rhs
-    );
+    friend std::ostream &operator<<<T>(std::ostream &os,const List &rhs);
 
 public:
     using Node = ListNode<T>;
@@ -860,8 +856,9 @@ void List<T>::insertSort() noexcept
 template<typename T>
 void List<T>::sort()
 {
-    static std::default_random_engine e(std::chrono::system_clock::now().time_since_epoch().count());
-    static std::uniform_int_distribution<int> u(0, 2);
+    std::random_device rd;
+    std::default_random_engine e{rd()};
+    std::uniform_int_distribution<int> u(0, 2);
     switch (u(e))
     {
         case 0:

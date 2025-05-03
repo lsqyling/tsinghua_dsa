@@ -33,11 +33,7 @@ std::ostream &operator<<(std::ostream &os, const SList<T> &rhs);
 template<typename T>
 class SList
 {
-    friend std::ostream &operator
-    <<<T>(
-    std::ostream &os,
-    const SList &rhs
-    );
+    friend std::ostream &operator<<<T>(std::ostream &os, const SList &rhs);
 public:
     using Node = ListNode<T>;
 
